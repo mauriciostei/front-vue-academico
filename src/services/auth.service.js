@@ -8,7 +8,7 @@ export const login = function(datos){
 }
 
 export const perfil = function (){
-
+    return http().get('/v1/auth/perfil');
 }
 
 export const logout = () => {
