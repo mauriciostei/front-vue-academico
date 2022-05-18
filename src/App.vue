@@ -37,14 +37,14 @@ export default {
                 {
                     label: 'Administrador',
                     items: [
-                        {label: 'Admin', icon: 'pi pi-fw pi-home', to: '/admin'},
+                        {label: 'Admin', icon: 'pi pi-fw pi-home', to: '/'},
                         {label: 'Perfil', icon: 'pi pi-fw pi-user', to: '/about'}
                     ]
                 },
                 {
-                    label: 'Academico', icon: 'pi pi-fw pi-sitemap',
+                    label: 'Académico', icon: 'pi pi-fw pi-sitemap',
                     items: [
-                        {label: 'Inicio', icon: 'pi pi-fw pi-id-card', to: '/'}
+                        {label: 'Gestión Carreras', icon: 'pi pi-fw pi-id-card', to: '/carrera'}
                     ]
                 }
 				// {

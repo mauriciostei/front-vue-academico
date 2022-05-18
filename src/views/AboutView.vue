@@ -1,7 +1,8 @@
 <template>
-  <div class="about">
+  <div class="card" v-if="perfil">
     <h1>Mi Perfil</h1>
-    <p> {{ perfil }} </p>
+    <h5>Correo: {{ perfil.email }} </h5>
+    <h5>Nombre: {{ perfil.name }} </h5>
   </div>
 </template>
 
@@ -16,8 +17,8 @@ export default{
     }
   },
   async mounted(){
-    const data = await auth.perfil()
-    this.perfil = data.data
+    const {data} = await auth.perfil()
+    this.perfil = data
   }
 }
 

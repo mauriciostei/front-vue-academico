@@ -1,13 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import LoginView from '../views/auth/LoginView.vue'
+import HomeView from '@/views/HomeView.vue'
+import LoginView from '@/views/auth/LoginView.vue'
+import CarreraVier from '@/views/admin/carrera/CarreraView.vue'
+import MostrarCarreraView from '@/views/admin/carrera/MostrarCarreraView.vue'
 import store from '@/store'
 import {Buffer} from 'buffer'
-import App from '../App.vue'
+import App from '@/App.vue'
 
 const routes = [
  {
-   path: '/admin',
+   path: '/',
    name: App,
    component: App,
    children: [
@@ -23,6 +25,16 @@ const routes = [
       component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
       meta: {requireAuth: true}
     },
+    {
+      path: '/carrera',
+      name: 'Carrera',
+      component: CarreraVier
+    },
+    {
+      path: '/carrera/:id',
+      name: 'MostrarCarrera',
+      component: MostrarCarreraView
+    }
    ]
  },
  {

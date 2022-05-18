@@ -79,7 +79,7 @@ export default {
             localStorage.setItem('auth', base64);
 
             // Redireccionar
-            this.$router.push('/admin');
+            this.$router.push('/');
         }
     },
     computed: {
